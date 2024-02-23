@@ -1,0 +1,127 @@
+* {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 100%;
+}
+
+ body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .content {
+    max-width: 1440px;
+    margin: 0 auto; /* Centers the content */
+    padding: 50px 70px; /* Left and right padding */
+    display: flex;
+    justify-content: center; /* Centers cards within the content area */
+    flex-wrap: wrap; /* Allows cards to wrap */
+    gap: 20px; /* Space between cards */
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Bottom margin for each card */
+    width: calc(25% - 20px); /* 4 cards per row - 20px gap */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space content inside the card */
+    overflow:hidden;
+  }
+
+  .card-image {
+    background: url('img/pic.png') center/cover no-repeat;
+    height: 250px;
+  }
+
+  .card-content {
+    padding: 30px 20px 20px 20px;
+  }
+
+  .card-title {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0;
+    margin-bottom: 9px;
+  }
+
+  .card-body {
+    font-size: clamp(1.3rem, 1.5vw, 1.25rem);
+    color: #555;
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight:300;
+    letter-spacing: 0.2px;
+    line-height: 1.54;
+  }
+
+  .tag {
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 8px;
+    margin-right: 8px;
+    font-size: clamp(0.75rem, 1vw, 0.875rem);
+    color: #333;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 20px 20px;
+  }
+
+  .icon {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .like, .comment {
+    display: flex;
+    align-items: center;
+  }
+
+  .like:before, .comment:before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+
+  .like:before {
+    background-image: url('img/heart.svg');
+  }
+
+  .comment:before {
+    background-image: url('img/eye.svg');
+  }
+
+  /* Adjustments for different screen sizes */
+  @media (max-width: 1024px) { /* For tablet */
+    .card {
+      width: calc(50% - 20px); /* 2 cards per row - 20px gap */
+    }
+  }
+
+  @media (max-width: 768px) { /* For mobile */
+    .card {
+      width: calc(100% - 20px); /* 1 card per row - 20px gap */
+    }
+  }
+
+  /* Fluid typography using clamp */
+  .card-title {
+    font-size: clamp(1.8rem, 2.5vw, 1.5rem); /* Adjust the values as needed */
+  }
+
+  .card-text {
+    font-size: clamp(0.8rem, 2vw, 1.2rem); /* Adjust the values as needed */
+  }
+
+  /* Further styling for .card-image, .card-content, .card-footer, etc... */
